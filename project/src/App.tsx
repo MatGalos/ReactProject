@@ -1,9 +1,29 @@
-import React from 'react';
+import React,{FC} from 'react'
+import styled from 'styled-components'
+import MainHeader from './Components/common/Header/MainHeader'
+import SidePanel from './Components/common/sidePanel/SidePanel';
 
-function App() {
+const Wrapper = styled.div`
+    justify-content: center;
+    align-items:center;
+    display:flex;
+    flex-direction: column;
+`;
+const Content = styled.div`
+    max-width:1200px;
+    align-items: center;
+    display:flex;
+`;
+
+const App : FC = () => {
   return (
-    <div className="App">
-    </div>
+    <Wrapper>
+        <MainHeader/>
+        <Content>
+          <SidePanel/>
+          <div>tu bedzie reszta</div>
+        </Content>
+    </Wrapper>
   );
 }
 
