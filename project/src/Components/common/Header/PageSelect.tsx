@@ -37,12 +37,6 @@ const PageSelect: FC = () => {
         </InnerWrapper>
         {dropdownOpen && <ExpandedMenu />}
       </div>
-
-      {/* <img src="../../../icons/house2.png" alt="inSearchLogo"></img>
-      <Select>
-        <option value="home">Home</option>
-        <option value="inne">Inne</option>
-      </Select> */}
     </Wrapper>
   );
 };

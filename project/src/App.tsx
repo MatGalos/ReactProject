@@ -21,7 +21,7 @@ const App : FC = () => {
         <MainHeader/>
         <Content>
           <SidePanel/>
-          <div>tu bedzie reszta</div>
+          <div>Work in progress</div>
         </Content>
     </Wrapper>
   );

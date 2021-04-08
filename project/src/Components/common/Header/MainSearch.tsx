@@ -16,7 +16,7 @@ const MainSearch: FC = () => {
   return (
     <>
       <Wrapper>
-        <Input placeholder="Search Illegalcluster"></Input>
+        <Input placeholder="Wpisz to czego szukasz"></Input>
         <IconHolder
             source="../../../icons/search.png"
             alt="inputlogo"
