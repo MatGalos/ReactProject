@@ -5,23 +5,22 @@ import useDropdown from "react-dropdown-hook";
 import IconHolder from "../../IconHolder";
 
 const ActualPageName = styled.div`
-  width: 150px;
+  width: 175px;
   margin: 30px;
 `;
 const Wrapper = styled.div`
-  width: 300px;
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 const InnerWrapper = styled(Wrapper)`
-  width: 150px;
+  width: 250px;
 `;
 
 const PageSelect: FC = () => {
   const [wrapperRef, dropdownOpen, toggleDropdown] = useDropdown();
   const menuHandler = () => {
-    console.log("kliku");
     toggleDropdown();
   };
   return (

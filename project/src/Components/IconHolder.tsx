@@ -7,7 +7,7 @@ interface IIconInterface{
     alt:string
 }
 const styleOfImage:CSSProperties={
-  paddingRight:'10px',
+  paddingRight:'15px',
   paddingLeft:'5px',
 }
 
