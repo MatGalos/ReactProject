@@ -9,7 +9,7 @@ const Wrapped=styled.div`
     height:100%;
     display:flex;
     flex-direction:column;
-    background-color:pink;`
+`
 
 const SidePanel: FC = () =>{
     return(
