@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styled from "styled-components";
 import IconHolder from "../../IconHolder";
 const Input = styled.input`
-  width: 1000px;
+ width: 1150px;
   border: none;
   height: 30px;
   ::-webkit-input-placeholder {

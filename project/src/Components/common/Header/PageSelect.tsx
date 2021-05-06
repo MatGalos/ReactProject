@@ -2,41 +2,74 @@ import React, { FC } from "react";
 import styled from "styled-components";
 import ExpandedMenu from "./ExpandedMenu";
 import useDropdown from "react-dropdown-hook";
-import IconHolder from "../../IconHolder";
+import { useLocation } from 'react-router-dom'
 
-const ActualPageName = styled.div`
-  width: 175px;
-  margin: 30px;
-`;
 const Wrapper = styled.div`
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
+
+const ActualPageName = styled.div`
+  width: 175px;
+  margin: 30px;
+`;
 const InnerWrapper = styled(Wrapper)`
   width: 250px;
+  flex-direction:row;
+  position:relative;
+  margin:5px 0;
+`;
+export const IconHolder = styled.div`
+  width:40px;
+    height:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 `;
 
 const PageSelect: FC = () => {
-  const [wrapperRef, dropdownOpen, toggleDropdown] = useDropdown();
-  const menuHandler = () => {
-    toggleDropdown();
-  };
-  return (
-    <Wrapper>
-      <div ref={wrapperRef}>
-        <InnerWrapper onClick={menuHandler}>
-          <IconHolder source="../../../icons/house2.png" alt="inSearchLogo" />
-          <ActualPageName>Home</ActualPageName>
-          <IconHolder
-            source="../../../icons/arrow-down.png"
-            alt="arrowDropdown"
-          />
-        </InnerWrapper>
-        {dropdownOpen && <ExpandedMenu />}
-      </div>
-    </Wrapper>
-  );
+    const [wrapperRef, dropdownOpen, toggleDropdown, closeDropdown] = useDropdown();
+    const menuHandler = () => {
+        toggleDropdown();
+    };
+    const location = useLocation();
+
+    const closeMenu = () => {
+        closeDropdown();
+    }
+    const locationHandler = (path: string): string => {
+        switch (path) {
+            case "/":
+                return "Home";
+            case "/publications":
+                return "Publications";
+            case "/entities":
+                return "Entities";
+            case "/workspaces":
+                return "Workspaces";
+            case "/profile":
+                return "Profile";
+            default:
+                return "Main";
+        }
+    }
+    return (
+        <Wrapper>
+            <div ref={wrapperRef}>
+                <InnerWrapper onClick={menuHandler}>
+                    <IconHolder>
+                        <img src="../../../icons/house2.png" alt="inSearchLogo" />
+                    </IconHolder>
+                    <ActualPageName>{locationHandler(location.pathname)}</ActualPageName>
+                    <IconHolder>
+                        <img src="../../../icons/arrow-down.png" alt="arrowDropdown" />
+                    </IconHolder>
+                </InnerWrapper>
+                {dropdownOpen && <ExpandedMenu closeDropMenu={closeMenu} />}
+            </div>
+        </Wrapper>
+    );
 };
 export default PageSelect;

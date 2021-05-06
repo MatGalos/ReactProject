@@ -27,6 +27,7 @@ const DirectionIcon = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    margin-left:110px;
     border: 1px #451cb4 solid;
     border-radius:2px;
     box-shadow: 2px 2px 2px #c5c5c5;

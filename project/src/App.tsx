@@ -1,4 +1,4 @@
-import React,{FC} from 'react'
+import React, { FC, useEffect } from "react";
 import styled from 'styled-components'
 import MainHeader from './Components/common/Header/MainHeader'
 import SidePanel from './Components/common/sidePanel/SidePanel';
@@ -18,6 +18,12 @@ import Publications from './Components/mainContent/publicationsPage/publication'
 import RealEstateContact from './Components/mainContent/realEstateContactPage/realEstateContact';
 import Settings from './Components/mainContent/settingsPage/settings'
 import SupplierContact from './Components/mainContent/supplierContactPage/supplierContact';
+import {useDispatch} from 'react-redux';
+import {getUsers} from './actions/usersActions';
+import {getPhotos} from './actions/photosActions';
+
+type GetUsers = ReturnType<typeof getUsers>;
+type GetPhotos = ReturnType<typeof getPhotos>;
 
 const Wrapper = styled.div`
     justify-content: center;
@@ -32,6 +38,11 @@ const Content = styled.div`
 `;
 
 const App : FC = () => {
+  const dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch<GetUsers>(getUsers());
+        dispatch<GetPhotos>(getPhotos());
+    });
   return (
       <Router>
         <Wrapper>
