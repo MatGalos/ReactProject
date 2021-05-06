@@ -1,5 +1,8 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+import { IState } from '../../../Reducers';
+import { IPhotosReducer } from '../../../Reducers/photosReducers';
 
 const Wrapper = styled.div`
     display:flex;
@@ -8,13 +11,11 @@ const Wrapper = styled.div`
     border-bottom:1px #e0dfdf solid;
 `;
 
-const ProfileImg = styled.img.attrs({
-    src: "../../icons/administration.png",
-    alt: "userPhoto",
-})`
+const ProfileImg = styled.img`
     width:130px;
     height:130px;
     border-radius:50%;
+    margin-top:10px;
 `;
 const Name = styled.div`
     margin: 10px 0;
@@ -28,17 +29,22 @@ const Description = styled.span`
 `;
 
 interface IProfilePicture{
-    name:string;
+    userName:string;
     picId:string;
     jobTitle:string;
     company:string;
 }
 const ProfilePicture: FC<IProfilePicture> = (props) => {
+
+    const {photosList} = useSelector<IState, IPhotosReducer>(globalState=>({
+        ...globalState.photos
+    }));
+
     return (
         <Wrapper>
-            <ProfileImg/>
+            {photosList[9] && <ProfileImg src={photosList[9].url} alt={"userPhoto"}/>}
             <Name>
-                {props.name}
+                {props.userName}
             </Name>
             <Description>
                 {props.jobTitle} - {props.company}

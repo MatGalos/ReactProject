@@ -2,6 +2,11 @@ import React, {FC} from 'react';
 import styled from 'styled-components';
 import PictureSection from './profilePicture';
 import YourLinksSection from './userLinkSection';
+import {useSelector} from 'react-redux';
+import {IState} from '../../../Reducers';
+import {IUsersReducer} from '../../../Reducers/usersReducers';
+
+
 
 const Wrapper = styled.div`
     display:flex;
@@ -13,15 +18,21 @@ const Wrapper = styled.div`
 `;
 
 const SidePanel: FC = () =>{
+    const { usersList} = useSelector<IState, IUsersReducer>(globalState => ({
+        ...globalState.users
+    }));
+
     return(
         <Wrapper>
-            <PictureSection
-            name={"Mateusz Galos"}
-            picId={"2"}
-            jobTitle={"Job title"}
-            company={"Company"}
-            />
-            <YourLinksSection/>
+            {console.log(usersList)}
+            {usersList[0] &&
+                <PictureSection
+                    userName={usersList[0].name}
+                    picId={"2"}
+                    jobTitle={"Job title"}
+                    company={usersList[0].company.name}
+                />}
+            <YourLinksSection />
         </Wrapper>
     );
 };
