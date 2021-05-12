@@ -27,10 +27,10 @@ const SidePanel: FC = () =>{
             {console.log(usersList)}
             {usersList[0] &&
                 <PictureSection
-                    userName={usersList[0].name}
+                    userName={usersList[1].name}
                     picId={"2"}
                     jobTitle={"Job title"}
-                    company={usersList[0].company.name}
+                    company={usersList[1].company.name}
                 />}
             <YourLinksSection />
         </Wrapper>

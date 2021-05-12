@@ -21,9 +21,14 @@ import SupplierContact from './Components/mainContent/supplierContactPage/suppli
 import {useDispatch} from 'react-redux';
 import {getUsers} from './actions/usersActions';
 import {getPhotos} from './actions/photosActions';
+import {getComments} from './actions/commentsActions';
+import {getPosts} from './actions/postsActions';
 
 type GetUsers = ReturnType<typeof getUsers>;
 type GetPhotos = ReturnType<typeof getPhotos>;
+type GetComments = ReturnType<typeof getComments>;
+type GetPosts = ReturnType<typeof getPosts>;
+
 
 const Wrapper = styled.div`
     justify-content: center;
@@ -42,6 +47,8 @@ const App : FC = () => {
     useEffect(()=>{
         dispatch<GetUsers>(getUsers());
         dispatch<GetPhotos>(getPhotos());
+        dispatch<GetComments>(getComments());
+        dispatch<GetPosts>(getPosts());
     });
   return (
       <Router>

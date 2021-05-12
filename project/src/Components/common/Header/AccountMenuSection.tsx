@@ -20,7 +20,7 @@ const AccountMenuSection: FC<IMenuSection> = (props) => {
             <Title>{props.title}</Title>
             <ProfileView
                 linkTo={"/profile"}
-                userName={usersList[0].name}
+                userName={usersList[1].name}
                 closeDropMenu={props.closeDropMenu}
             />
             {props.options.map((el) => <MenuOption
