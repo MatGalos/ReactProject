@@ -23,6 +23,8 @@ import {getUsers} from './actions/usersActions';
 import {getPhotos} from './actions/photosActions';
 import {getComments} from './actions/commentsActions';
 import {getPosts} from './actions/postsActions';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 type GetUsers = ReturnType<typeof getUsers>;
 type GetPhotos = ReturnType<typeof getPhotos>;
