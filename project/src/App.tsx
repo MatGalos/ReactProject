@@ -18,6 +18,7 @@ import Publications from './Components/mainContent/publicationsPage/publication'
 import RealEstateContact from './Components/mainContent/realEstateContactPage/realEstateContact';
 import Settings from './Components/mainContent/settingsPage/settings'
 import SupplierContact from './Components/mainContent/supplierContactPage/supplierContact';
+import ProfilePage from './Components/common/ProfilePanel/ProfilePanel'
 import {useDispatch} from 'react-redux';
 import {getUsers} from './actions/usersActions';
 import {getPhotos} from './actions/photosActions';
@@ -99,6 +100,9 @@ const App : FC = () => {
                 </Route>
                 <Route path="/ecosystem">  
                   <Ecosystem />
+                </Route>
+                <Route path="/profile_page">
+                  <ProfilePage />
                 </Route>
                 <Route path="/">  
                   <MainPanel />

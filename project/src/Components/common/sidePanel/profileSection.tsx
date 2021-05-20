@@ -5,8 +5,11 @@ import YourLinksSection from './userLinkSection';
 import {useSelector} from 'react-redux';
 import {IState} from '../../../Reducers';
 import {IUsersReducer} from '../../../Reducers/usersReducers';
+import { Link } from 'react-router-dom';
 
-
+const CustomLink = styled(Link)`
+    text-decoration: none;
+`;
 
 const Wrapper = styled.div`
     display:flex;
@@ -24,6 +27,7 @@ const SidePanel: FC = () =>{
 
     return(
         <Wrapper>
+            <CustomLink to={"/profile_page"}>
             {console.log(usersList)}
             {usersList[0] &&
                 <PictureSection
@@ -32,6 +36,7 @@ const SidePanel: FC = () =>{
                     jobTitle={"Job title"}
                     company={usersList[1].company.name}
                 />}
+            </CustomLink>
             <YourLinksSection />
         </Wrapper>
     );
