@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-    background: grey;
-    display: flex;
+const Wrapper = styled.div`
     justify-content: center;
-    padding: 5px;
+    align-items:center;
+    display:flex;
+    flex-direction: column;
 `;
+
+export default Wrapper

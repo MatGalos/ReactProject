@@ -1,8 +1,15 @@
 import React,{FC} from "react";
+import IRTables from './proposalsModules/proposalsTable'
+import '../../styleHelpers/table.css'
+import Components from '../../styleHelpers/Components'
 
-const proposals:FC=()=>{
+const internalReviews:FC=()=>{
     return(
-        <h2>this is proposals component</h2>
+        <Components>
+        <h2>Internal Reviews</h2>
+        <IRTables/>
+        <h2>See more Reviews</h2>
+        </Components>
     );
 };
-export default proposals;
+export default internalReviews;

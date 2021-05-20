@@ -1,8 +1,14 @@
 import React,{FC} from "react";
+import AOFTable from './ammountOfFeesModules/aofTable'
+import Components from '../../styleHelpers/Components'
+import '../../styleHelpers/table.css'
 
-const ammountOfFees:FC=()=>{
+const AmmountOfFees:FC=()=>{
     return(
-        <h2>this is ammount of fees</h2>
+        <Components>
+            <h2>Ammount of fees </h2>
+            <AOFTable/>
+        </Components>
     );
 };
-export default ammountOfFees;
+export default AmmountOfFees;

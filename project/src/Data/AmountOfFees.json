@@ -1,6 +1,6 @@
-[{"id":1,"year":2017,"cost_center":"CS 43","total_ammount":28842,"Company":"Flashpoint"},
-{"id":2,"year":2017,"cost_center":"CS 33","total_ammount":80834,"Company":"Layo"},
-{"id":3,"year":2016,"cost_center":"CS 83","total_ammount":91451,"Company":"Livetube"},
-{"id":4,"year":2018,"cost_center":"CS 83","total_ammount":93454,"Company":"Buzzdog"},
-{"id":5,"year":2018,"cost_center":"CS 03","total_ammount":43459,"Company":"Twitterworks"},
-{"id":6,"year":2018,"cost_center":"CS 03","total_ammount":84769,"Company":"Shufflester"}]
+[{"year":2017,"cost_center":"CS 43","total_ammount":"28 842$","Company":"Flashpoint"},
+{"year":2017,"cost_center":"CS 33","total_ammount":"80 834$","Company":"Layo"},
+{"year":2016,"cost_center":"CS 83","total_ammount":"91 451$","Company":"Livetube"},
+{"year":2018,"cost_center":"CS 83","total_ammount":"93 454$","Company":"Buzzdog"},
+{"year":2018,"cost_center":"CS 03","total_ammount":"43 459$","Company":"Twitterworks"},
+{"year":2018,"cost_center":"CS 03","total_ammount":"84 769$","Company":"Shufflester"}]
