@@ -40,7 +40,6 @@ const Wrapper = styled.div`
 `;
 const Content = styled.div`
     width:1700px;
-    align-items: center;
     display:flex;
 `;
 

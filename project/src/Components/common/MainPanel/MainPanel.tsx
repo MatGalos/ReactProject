@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import Publication from '../../mainContent/publicationsPage/publication'
 import Workspace from '../../mainContent/workspacePage/Workspaces'
+import Comments from '../../mainContent/commentPage/Comments'
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -15,6 +16,7 @@ const SidePanel: FC = () =>{
         <Wrapper>
         <Publication />
         <Workspace />
+        <Comments/>
         </Wrapper>
     );
 };
