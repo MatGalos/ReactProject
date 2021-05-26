@@ -7,10 +7,9 @@ import PanelInformations from '../../profileContent/panelInformationsComponent/p
 import ProfileSettings from '../../profileContent/profileSettingsComponent/profileSettings'
 
 const Wrapper = styled.div`
-    justify-content: center;
-    align-items:center;
-    display:flex;
-    flex-direction: column;
+    width:1000px;
+    background-color:'#FFF';
+    position:relative;
 `;
 const ProfilePanel:FC=()=>{
     return(

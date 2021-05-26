@@ -2,13 +2,20 @@ import React,{FC} from "react";
 import IRTables from './internalReviewsModules/irTable'
 import '../../styleHelpers/table.css'
 import Components from '../../styleHelpers/Components'
+import styled from 'styled-components'
+
+const Header = styled.h2`
+    font-size:30px;
+    margin-top:5px;
+    margin-left:5px;
+`;
 
 const internalReviews:FC=()=>{
     return(
         <Components>
-        <h2>Internal Reviews</h2>
+        <Header>Internal Reviews</Header>
         <IRTables/>
-        <h2>See more Reviews</h2>
+        <Header>See more Reviews</Header>
         </Components>
     );
 };

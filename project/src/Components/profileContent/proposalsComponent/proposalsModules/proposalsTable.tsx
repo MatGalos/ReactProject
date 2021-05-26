@@ -1,10 +1,10 @@
-import React,{FC, useMemo} from "react";
+import React,{useMemo} from "react";
 import {useTable} from 'react-table';
 import InternalReviews from '../../../../Data/Proposals.json'
 import {Columns} from "./proposalsDataTypes"
 import '../../../styleHelpers/table.css'
 
-const IRTable:FC=()=>{
+function IRTable(){
     const columns=useMemo(()=>Columns,[])
     const data=useMemo(()=>InternalReviews,[])
     
