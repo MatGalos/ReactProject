@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainPanel from './Components/common/MainPanel/MainPanel'
 import Entities from "./Components/mainContent/entitiesPage/Entities";
 import Workspaces from "./Components/mainContent/workspacePage/Workspaces";
-import Profile from "./Components/mainContent/profilesPage/Profile";
 import Administration from './Components/mainContent/administrationPage/administration';
 import ClientContact from './Components/mainContent/clientContactPage/clientContact';
 import Corporate from './Components/mainContent/corporatePage/corporate';
@@ -66,7 +65,7 @@ const App : FC = () => {
                   <Workspaces />
                 </Route>
                 <Route path="/profile">  
-                  <Profile />
+                <ProfilePage />
                 </Route>
                 <Route path="/administration">  
                   <Administration />

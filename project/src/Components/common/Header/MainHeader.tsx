@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MainSearch from "./MainSearch";
 import PageSelect from "./PageSelect";
 import IconHolder from "../../IconHolder";
+import FakeIconHolder from "./fakeIconFolder";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -34,13 +35,15 @@ const MainHeader: FC = () => {
             source ="./icons/house.png"
             alt="houseLogo"
           />
-          <IconHolder
+          <FakeIconHolder
             source ="./icons/comments.png"
             alt="commentsLogo"
+            fakeNotCounter={Math.floor(Math.random()*(100-1))+1}
           />
-          <IconHolder
+          <FakeIconHolder
             source ="./icons/bell.png"
             alt="alertLogo"
+            fakeNotCounter={Math.floor(Math.random()*(100-1))+1}
           />
       </Icons>
     </Wrapper>
