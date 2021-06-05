@@ -9,13 +9,17 @@ const Wrapper = styled.div`
     height:30px;
     display:flex;
     align-items:center;
-    &:hover{
-        background-color:#a5a5a5;
-    }
+    &:hover {
+    background-color: #fcf7f7; 
+  }
+  &:active {
+    background-color: #e6e6e6; 
+  }
 `;
 const CustomLink = styled(Link)`
     text-decoration: none;
     color:black;
+    
 `;
 export interface IMenuOption {
     imgSource: string;

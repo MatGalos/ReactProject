@@ -27,8 +27,7 @@ const SidePanel: FC = () =>{
 
     return(
         <Wrapper>
-            <CustomLink to={"/profile_page"}>
-            {console.log(usersList)}
+            <CustomLink to={"/profile"}>
             {usersList[0] &&
                 <PictureSection
                     userName={usersList[1].name}

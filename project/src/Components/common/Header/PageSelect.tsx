@@ -5,21 +5,28 @@ import useDropdown from "react-dropdown-hook";
 import { useLocation } from 'react-router-dom'
 
 const Wrapper = styled.div`
-  width: 20%;
+  width: 450px;
   display: flex;
-  justify-content: center;
+  margin-left:75px;
   align-items: center;
 `;
 
 const ActualPageName = styled.div`
-  width: 175px;
+  width: 250px;
   margin: 30px;
 `;
 const InnerWrapper = styled(Wrapper)`
-  width: 250px;
+  width: 375px;
+  height:30px;
   flex-direction:row;
   position:relative;
-  margin:5px 0;
+  margin: 0;
+  &:hover {
+    background-color: #fcf7f7; 
+  }
+  &:active {
+    background-color: #e6e6e6; 
+  }
 `;
 export const IconHolder = styled.div`
   width:40px;
@@ -27,6 +34,7 @@ export const IconHolder = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    
 `;
 
 const PageSelect: FC = () => {

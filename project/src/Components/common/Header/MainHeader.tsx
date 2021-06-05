@@ -4,10 +4,11 @@ import MainSearch from "./MainSearch";
 import PageSelect from "./PageSelect";
 import IconHolder from "../../IconHolder";
 import FakeIconHolder from "./fakeIconFolder";
+import {Link} from 'react-router-dom'
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 40px;
+  height: 50px;
   align-items: center;
   display: flex;
   box-shadow: -0px 0px 5px #d4d4d4;
@@ -20,14 +21,18 @@ const Icons = styled.div`
   justify-content: flex-end;
 `;
 
+
+
 const MainHeader: FC = () => {
     
   return (
     <Wrapper>
+      <Link to='/'>
         <IconHolder
             source="../icons/ecosystem.png"
             alt="siteLogo"
         />
+        </Link>
       <PageSelect />
       <MainSearch />
       <Icons>

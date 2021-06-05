@@ -7,6 +7,7 @@ export const Title = styled.div`
     color:#a6a6a6;
     font-weight:600;
     margin: 5px;
+    
 `;
 export interface IMenuSection {
     title: string;

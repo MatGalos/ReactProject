@@ -16,6 +16,12 @@ const Container = styled.div`
     background-color:#e6e6e6;
     margin:0 3px;
     position: relative;
+    &:hover {
+    background-color: #fcf7f7; 
+  }
+  &:active {
+    background-color: #e6e6e6; 
+  }
 `;
 const FakeCounter = styled.div`
     width:15px;

@@ -6,11 +6,13 @@ import Logout from "./Logout";
 import { IMenuOption } from "./MenuOption";
 
 const Menu = styled.div`
-    width:250px;
+    padding-top:10px;
+    width:350px;
     display:inline-flex;
     position:absolute;
     flex-direction:column;
     background-color:white;
+    box-shadow: 0px 3px 4px #c5c5c5;
 `;
 const Input = styled.input`
     border: 1px #a6a6a6 solid;
