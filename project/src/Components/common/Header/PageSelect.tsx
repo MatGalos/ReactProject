@@ -59,6 +59,20 @@ const PageSelect: FC = () => {
                 return "Workspaces";
             case "/profile":
                 return "Profile";
+            case "/people":
+                return "People";
+            case "/administration":
+                return "Administration";
+            case "/client_contact":
+                return "Client contract" ;
+            case "/supplier_contact":
+                return "Supplier contract";
+            case "/corporate":
+                return "Corporate";
+            case "/group":
+                return "Group Norms";
+            case"/real_estate_contact" :
+                return "Real estate contracts";
             default:
                 return "Main";
         }

@@ -7,7 +7,7 @@ import { IconHolder } from '../../../common/Header/PageSelect';
 import SingleWorkspaceInfo from './workspaceData';
 
 const Wrapper = styled.div`
-    width:280px;
+    width:330px;
     border-radius:2px;
     box-shadow: 0px 2px 3px #c5c5c5;
     background-color:yellow;
@@ -28,7 +28,7 @@ const PhotoContainer = styled.div`
     z-index:1;
 `;
 const ImgHolder = styled.img`
-    width:280px;
+    width:330px;
     max-height:100%;
     object-fit:cover;
 `;

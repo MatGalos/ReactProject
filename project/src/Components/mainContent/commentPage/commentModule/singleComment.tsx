@@ -6,7 +6,7 @@ import CommentInfo from './commentInfo';
 const Wrapper = styled.div`
     display:flex;
     flex-direction:column;
-    width:880px;
+    width:1000px;
     box-shadow: 0 2px 5px #c5c5c5;
     border-radius:4px;
     margin-bottom:10px;

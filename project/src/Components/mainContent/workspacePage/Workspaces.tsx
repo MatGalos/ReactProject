@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 
 
 const Wrapper = styled.div`
-    width:900px;
+    width:1000px;
 `;
 const Header = styled.div`
     font-size:18px;
@@ -21,7 +21,6 @@ const Container = styled.div`
 const CustomSlider = styled(Slider)`
     display:flex;
     align-items:center;
-    width:100%;
     overflow: hidden;
     .slick-list{
         height:210px;

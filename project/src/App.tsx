@@ -42,6 +42,10 @@ const Content = styled.div`
     width:1700px;
     display:flex;
 `;
+const Container=styled.div`
+padding-left:30px;
+padding-top:30px;
+`;
 
 const App : FC = () => {
   const dispatch = useDispatch();
@@ -57,6 +61,7 @@ const App : FC = () => {
           <MainHeader/>
           <Content>
             <SidePanel/>
+            <Container>
               <Switch>
                 <Route path="/entities">
                   <Entities />
@@ -107,6 +112,7 @@ const App : FC = () => {
                   <MainPanel />
                 </Route>
               </Switch>
+              </Container>
           </Content>
         </Wrapper>
       </Router>

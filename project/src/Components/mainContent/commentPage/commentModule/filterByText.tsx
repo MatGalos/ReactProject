@@ -2,29 +2,37 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    width: 500px;
+    width: 790px;
     display:flex;
     justify-content:flex-end;
     margin-right:30px;
 `;
 const Input = styled.input`
     border: none;
-    width:130px;
+    width:180px;
     &:focus{
-        border: 1px solid #1670BE;
-        box-shadow: 0 0 3px #1670BE;
+        border: none;
+        box-shadow:none;
         outline-offset: 0px;
         outline: none;
+        background-color: #e6e6e6; 
     }
+    
     padding-left:5px;
 `;
 const InputWrapper = styled.div`
     display:flex;
     height:37px;
-    border: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
     border-radius:5px;
     box-sizing:border-box;
     overflow:hidden;
+    &:hover {
+    background-color: #fcf7f7; 
+  }
+  &:active {
+    background-color: #e6e6e6; 
+  }
 `;
 const SearchIcon = styled.div`
     width:40px;

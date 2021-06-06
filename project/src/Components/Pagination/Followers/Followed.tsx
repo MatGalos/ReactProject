@@ -5,7 +5,7 @@ import ExpandedMenu from '../ExpandedMenu/ExpandedMenu';
 
 const Wrapper = styled.div`
     display:flex;
-    width:135px;
+    width:180px;
     color:#1a4986;
     font-weight:1000;
     flex-direction:column;

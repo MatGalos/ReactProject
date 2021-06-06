@@ -5,7 +5,7 @@ import LinksSection from './linksSection';
 
 const Wrapped=styled.div`
     width:23%;
-    margin-top:3%;
+    padding-top:30px;
     height:100%;
     display:flex;
     flex-direction:column;

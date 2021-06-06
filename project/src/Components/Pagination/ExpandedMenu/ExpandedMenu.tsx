@@ -4,7 +4,7 @@ import FollowedOption from '../Followers/FollowedOption';
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    position:absolute;
+    position:absolute;box-shadow: 0px 3px 4px #c5c5c5;
 `;
 
 interface IExpandedMenu {

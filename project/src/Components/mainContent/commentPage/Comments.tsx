@@ -7,10 +7,12 @@ import CommentsPagination from '../../Pagination/commentsPagination/commentsPagi
 const Wrapper = styled.div`
     display:flex;
     flex-direction:column;
+    width:1000px;
 `;
 
 const HeaderSection = styled.div`
     display:flex;
+    width:1050px;
     align-items:center;
     padding:5px 0;
 `;

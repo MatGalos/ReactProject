@@ -12,6 +12,7 @@ import SingleComment from '../../mainContent/commentPage/commentModule/singleCom
 
 const Wrapper = styled.div`
     ul {
+        
         display:flex;
         justify-content:center;
         align-items:center;

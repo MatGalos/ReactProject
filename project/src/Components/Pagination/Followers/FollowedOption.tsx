@@ -4,14 +4,13 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
     display:flex;
     width:90px;
-    color:#1a4986;
+    color:black;
     font-weight:1000;
     font-size:13px;
     justify-content:center;
     align-items:center;
     padding:5px 0;
     background:white;
-    border: 1px solid #c5c5c5;
     position:relative;
     &:hover{
         background-color:black;
