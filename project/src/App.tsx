@@ -9,7 +9,6 @@ import Workspaces from "./Components/common/WorkspacePanel/Workspace";
 import Administration from './Components/mainContent/administrationPage/administration';
 import ClientContact from './Components/mainContent/clientContactPage/clientContact';
 import Corporate from './Components/mainContent/corporatePage/corporate';
-import Ecosystem from './Components/mainContent/ecosystemPage/ecosystem';
 import Group from './Components/mainContent/groupPage/group';
 import People from './Components/mainContent/peoplePage/people';
 import Privacy from './Components/mainContent/privacyPage/privacy';
@@ -67,7 +66,7 @@ const App : FC = () => {
                   <Entities />
                 </Route>
                 <Route path="/workspace">  
-                  <Workspaces />
+                  <Workspaces icon={'icons/entities.png'} title={'tytul'}/>
                 </Route>
                 <Route path="/profile">  
                 <ProfilePage />
@@ -103,7 +102,7 @@ const App : FC = () => {
                   <Settings />
                 </Route>
                 <Route path="/ecosystem">  
-                <Workspaces />
+                <Workspaces icon={'icons/entities.png'} title={'tytul'}/>
                 </Route>
                 <Route path="/profile_page">
                   <ProfilePage />
