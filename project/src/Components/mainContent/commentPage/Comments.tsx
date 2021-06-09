@@ -27,12 +27,15 @@ const Title = styled.div`
 const Comments: FC = () => {
     const [filterValue, setFitlerValue] = useState('');
     const [myPostsOnly, setMyPostsOnly] = useState(false);
+    const [currentPage, setCurrentPage] = useState(0);
 
     const filterHandler = (val: string) => {
         setFitlerValue(val);
+        setCurrentPage(0);
     }
     const myPostsHandler = (val: boolean) => {
         setMyPostsOnly(val);
+        setCurrentPage(0);
     }
     return (
         <Wrapper>
@@ -49,6 +52,8 @@ const Comments: FC = () => {
             <CommentsPagination
                 filterValue={filterValue}
                 myPostsOnly={myPostsOnly}
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
             />
         </Wrapper>
     );

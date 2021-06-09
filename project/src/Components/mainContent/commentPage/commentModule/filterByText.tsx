@@ -24,7 +24,6 @@ const InputWrapper = styled.div`
     display:flex;
     height:37px;
     border-bottom: 1px solid #c5c5c5;
-    border-radius:5px;
     box-sizing:border-box;
     overflow:hidden;
     &:hover {

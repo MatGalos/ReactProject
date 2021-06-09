@@ -2,8 +2,12 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import SingleWorkspace from './workspaceModules/workspace';
 import Slider from 'react-slick';
+import { Link } from "react-router-dom";
 
-
+const CustomLink=styled(Link)`
+text-decoration: none;
+color:black;
+`;
 
 const Wrapper = styled.div`
     width:1000px;
@@ -45,11 +49,11 @@ const WorkspacesSection: FC = () => {
             <Header>Workspaces</Header>
             <Container>
                 <CustomSlider {...settings}>
-                    <SingleWorkspace title={'Client contract'} iconUrl={'../../icons/publications.png'} alt={'publications'}/>
-                    <SingleWorkspace title={'Supplier contract'} iconUrl={'../../icons/people.png'} alt={'people'}/>
-                    <SingleWorkspace title={'Corporate'} iconUrl={'../../icons/entities.png'} alt={'entities'}/>
-                    <SingleWorkspace title={'Real estate contracts'} iconUrl={'../../icons/comments.png'} alt={'comments'}/>
-                    <SingleWorkspace title={'Group Norms'} iconUrl={'../../icons/ecosystem.png'} alt={'ecosystem'}/>
+                    <CustomLink to="/client_contact"><SingleWorkspace title={'Client contract'} iconUrl={'../../icons/publications.png'} alt={'publications'}/></CustomLink>
+                    <CustomLink to="/supplier_contact"><SingleWorkspace title={'Supplier contract'} iconUrl={'../../icons/people.png'} alt={'people'}/></CustomLink>
+                    <CustomLink to="/corporate"><SingleWorkspace title={'Corporate'} iconUrl={'../../icons/entities.png'} alt={'entities'}/></CustomLink>
+                    <CustomLink to="/real_estate_contact"><SingleWorkspace title={'Real estate contracts'} iconUrl={'../../icons/comments.png'} alt={'comments'}/></CustomLink>
+                    <CustomLink to="/group"><SingleWorkspace title={'Group Norms'} iconUrl={'../../icons/ecosystem.png'} alt={'ecosystem'}/></CustomLink>
                 </CustomSlider>
             </Container>
         </Wrapper>
