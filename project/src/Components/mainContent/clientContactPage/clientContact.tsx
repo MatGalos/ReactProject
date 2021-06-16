@@ -1,8 +1,9 @@
 import React from "react";
+import Workspace from '../../common/WorkspacePanel/Workspace'
 export default class Entities extends React.Component {
     render() {
         return (
-            <div>Client Contact</div>
+            <Workspace icon={'../../../icons/publications.png'} title={'Client contact'}/>
         )
     }
 }
