@@ -6,6 +6,7 @@ export const PUSH_DATA='PUSH_DATA';
 export interface IUserTypes{
     GET_USERS:{
         usersList:ISingleUser[];
+        currentUser: ISingleUser;
     };
     PUSH_DATA:{
         someData:string;

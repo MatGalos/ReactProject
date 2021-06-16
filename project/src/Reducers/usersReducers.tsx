@@ -3,12 +3,12 @@ import * as actionTypes from '../actions/actionType/userTypes';
 
 export interface IUsersReducer {
     usersList: ISingleUser[];
+    currentUser: ISingleUser;
 
 }
 const defaultState = (): IUsersReducer => ({
-    usersList: [
-        
-      ]
+    usersList: [],
+    currentUser: undefined!
 });
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -18,7 +18,8 @@ export default (state = defaultState(), action: any) => {
             const payLoad: actionTypes.IUserTypes['GET_USERS'] = action;
             return {
                 ...state,
-                usersList: payLoad.usersList
+                usersList: payLoad.usersList,
+                currentUser: payLoad.usersList[0]
             }
         }
         default: {
