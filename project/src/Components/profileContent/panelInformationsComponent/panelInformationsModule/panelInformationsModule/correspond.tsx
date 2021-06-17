@@ -8,7 +8,7 @@ import { IPhotosReducer } from '../../../../../Reducers/photosReducers';
 import { IUsersReducer } from '../../../../../Reducers/usersReducers';
 
 const Wrapper = styled.div`
-    width: 550px;
+    width: 975px;
     height:30px;
     background-color:${Colors.lightGray};
     display:flex;

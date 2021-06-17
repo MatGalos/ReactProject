@@ -3,12 +3,10 @@ import styled from 'styled-components';
 import { IState } from '../../../../Reducers'
 import { IPhotosReducer } from '../../../../Reducers/photosReducers';
 import { useSelector } from 'react-redux';
-import { IconHolder } from '../../../common/Header/PageSelect';
 import SingleWorkspaceInfo from './workspaceData';
 
 const Wrapper = styled.div`
     width:330px;
-    border-radius:2px;
     box-shadow: 0px 2px 3px #c5c5c5;
     background-color:yellow;
     height:200px;
@@ -103,7 +101,7 @@ const SingleWorkspace: FC<ISingleWorkspace> = (props) => {
             </Title>
             <TextContainer>
                 <UpdateInfo>
-                    Last updated {(Math.random()*10).toFixed()} days ago
+                    Last updated {Math.floor(Math.random()*50+1)} days ago
                 </UpdateInfo>
                 <SingleWorkspaceInfo
                     iconUrl={props.iconUrl}

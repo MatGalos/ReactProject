@@ -6,7 +6,6 @@ import SidePublications from './publicationsModules/sidePublications';
 const Wrapper = styled.div`
     width:1000px;
     height:300px;
-    border-radius:4px;
     box-shadow: 0px 2px 2px #c5c5c5;
     margin-bottom:20px;
     display:flex;

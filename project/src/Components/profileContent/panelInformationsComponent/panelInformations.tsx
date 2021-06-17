@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState  } from 'react';
 import styled from 'styled-components';
 import { Colors } from '../../styleHelpers/Colors';
 import { fontSize } from '../../styleHelpers/FontSizes';
@@ -31,9 +31,10 @@ const Text = styled.div`
     color:${Colors.blue};
     font-size:${fontSize[14]};
     margin-top:10px;
+    
 `;
 const AttachCV = styled.div`
-    width: 550px;
+    width: 975px;
     height:30px;
     background-color:${Colors.lightGray};
     display:flex;
@@ -41,6 +42,12 @@ const AttachCV = styled.div`
     font-size:${fontSize[14]};
     margin-top:5px;
 `;
+
+const AttachEditedCV=styled.input`
+background-color:white;
+border:none;
+width:975px;
+`
 
 const AttachImg = styled.img`
     width:20px;
@@ -102,12 +109,11 @@ export const JobInfo: FC<IJobInfo> = (props) =>{
         currency: {value: '€', label: '€'},
         negociated: true,
         terms: 'Montly 100k € retainer ',
-        file: 'xD.png',
+        file: 'sample.png',
         services: 'Corparate with Google and Bing',
         userOneID: {value: 4, label: 'Clementine Bauch'},
         userTwoID: {value: 3, label: 'Clementine Bauch'},
     });
-
     const currencyChange = (val) => setData({...data,currency: val});
     const userOneChange = (val) => setData({...data,userOneID: val});
     const userTwoChange = (val) => setData({...data,userTwoID: val});
@@ -137,8 +143,9 @@ export const JobInfo: FC<IJobInfo> = (props) =>{
                             :(<CustomInput type='text' value={data?.terms} onChange={e => setData({...data, terms: e.target.value})}/>)
                 }  
             </Text>
-            <AttachCV><AttachImg src='../icons/file.png'/>
-                
+            <AttachCV>{
+            !props?.isEditable?data?.file:(<AttachEditedCV type='text' value={data?.file} onChange={e => setData({...data, file: e.target.value})}/>)
+            }
             </AttachCV>
             <Title>Services and Projects</Title>
             <Text>
